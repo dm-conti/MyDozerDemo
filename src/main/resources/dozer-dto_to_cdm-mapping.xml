@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+	xsi:schemaLocation="http://dozer.sourceforge.net http://dozer.sourceforge.net/schema/beanmapping.xsd">
+
+	<!-- CreateCustomerDTO TO Customer -->
+	<mapping>
+		<class-a>it.tmp.mexican.mydozerdemo.dto.CreateCustomerDTO</class-a>
+		<class-b>it.tmp.mexican.mydozerdemo.domain.Customer</class-b>
+		<field>
+			<a>customerName</a>
+			<b>name</b>
+		</field>
+		<field>
+			<a>customerSurname</a>
+			<b>lastName</b>
+		</field>
+		<field>
+			<a>customerCity</a>
+			<b>address.city</b>
+		</field>
+		<field>
+			<a>customerAddress</a>
+			<b>address.road</b>
+		</field>
+	</mapping>
+
+	<!-- CreateCustomerDTO TO Address -->
+	<mapping>
+		<class-a>it.tmp.mexican.mydozerdemo.dto.CreateCustomerDTO</class-a>
+		<class-b>it.tmp.mexican.mydozerdemo.domain.Address</class-b>
+		<field>
+			<a>customerCity</a>
+			<b>city</b>
+		</field>
+		<field>
+			<a>customerAddress</a>
+			<b>road</b>
+		</field>
+	</mapping>
+</mappings>
